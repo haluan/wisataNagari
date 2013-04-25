@@ -1,0 +1,25 @@
+<h1>Daftar Makanan</h1>
+
+<table>
+  <tr>
+    <th>Nama makanan</th>
+    <th>Asal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @makanans.each do |makanan| %>
+  <tr>
+    <td><%= makanan.namamakanan %></td>
+    <td><%= makanan.daerah.namadaerah %></td>
+    <td><%= link_to 'Show', makanan %></td>
+    <td><%= link_to 'Edit', edit_makanan_path(makanan) %></td>
+    <td><%= link_to 'Destroy', makanan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Makanan', new_makanan_path %>

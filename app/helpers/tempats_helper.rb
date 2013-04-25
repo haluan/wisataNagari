@@ -1,0 +1,2 @@
+module TempatsHelper
+end

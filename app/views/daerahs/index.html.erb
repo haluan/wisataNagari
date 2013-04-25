@@ -1,0 +1,23 @@
+<h1>Listing daerahs</h1>
+
+<table>
+  <tr>
+    <th>Namadaerah</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @daerahs.each do |daerah| %>
+  <tr>
+    <td><%= daerah.namadaerah %></td>
+    <td><%= link_to 'Show', daerah %></td>
+    <td><%= link_to 'Edit', edit_daerah_path(daerah) %></td>
+    <td><%= link_to 'Destroy', daerah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Daerah', new_daerah_path %>

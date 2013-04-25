@@ -1,0 +1,9 @@
+<h3>Daftar Makanan</h3>
+<% @makanans.each do |makanan| %>
+  <div>
+	<p><%= makanan.namamakanan %></p>
+    <p><%= makanan.daerah.namadaerah %></p>
+    <p><%=image_tag makanan.photo(:big)%></p>
+    <hr />
+  </div>
+<% end %>

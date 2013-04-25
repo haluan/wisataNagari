@@ -1,0 +1,25 @@
+<h1>Listing budayas</h1>
+
+<table>
+  <tr>
+    <th>Nama budaya</th>
+    <th>Asal</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @budayas.each do |budaya| %>
+  <tr>
+    <td><%= budaya.namabudaya %></td>
+    <td><%= budaya.daerah.namadaerah %></td>
+    <td><%= link_to 'Show', budaya %></td>
+    <td><%= link_to 'Edit', edit_budaya_path(budaya) %></td>
+    <td><%= link_to 'Destroy', budaya, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Budaya', new_budaya_path %>

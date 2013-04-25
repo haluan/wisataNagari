@@ -1,0 +1,36 @@
+<%= form_for @konten, :html => { :multipart => true } do |f| %>
+  <% if @konten.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@konten.errors.count, "error") %> prohibited this konten from being saved:</h2>
+
+      <ul>
+      <% @konten.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+  <div class="field">
+    <%= f.label :namawisata %><br />
+    <%= f.text_field :namawisata %>
+  </div>
+  <div class="field">
+    <%= f.label :tempat %><br />
+    <%= f.text_field :tempat %>
+  </div>
+  <div class="field">
+  	<%=f.label "provinsi"%>
+  <%= f.select :daerah_id , options %>
+  </div>
+  <div class="field">
+    <%= f.label :deskripsi %><br />
+    <%= f.text_area :deskripsi %>
+  </div>
+  <div class="field">
+  	<%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

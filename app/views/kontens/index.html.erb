@@ -1,0 +1,29 @@
+<h1>Listing kontens</h1>
+
+<table>
+  <tr>
+  	<th></th>
+    <th>Namawisata</th>
+    <th>Tempat</th>
+    <th>Provinsi</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kontens.each do |konten| %>
+  <tr>
+  	<td><%= image_tag konten.photo(:thumb)%></td>
+    <td><%= konten.namawisata %></td>
+    <td><%= konten.tempat %></td>
+    <td><%= konten.daerah.namadaerah%> </td>
+    <td><%= link_to 'Show', konten %></td>
+    <td><%= link_to 'Edit', edit_konten_path(konten) %></td>
+    <td><%= link_to 'Destroy', konten, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Konten', new_konten_path %>

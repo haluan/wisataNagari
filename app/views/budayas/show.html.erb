@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Namabudaya:</b>
+  <%= @budaya.namabudaya %>
+</p>
+
+<p>
+  <b>Deskripsibudaya:</b>
+  <%= @budaya.deskripsibudaya %>
+</p>
+<%= image_tag @budaya.photo.url(:big) %>
+
+<%= link_to 'Edit', edit_budaya_path(@budaya) %> |
+<%= link_to 'Back', budayas_path %>

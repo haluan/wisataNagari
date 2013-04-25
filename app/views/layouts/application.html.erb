@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wisata Negara</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<header>
+	<%=link_to 'wisata', root_path%>
+	<%=link_to 'kebudayaan', kebudayaan_path%>
+	<%=link_to 'makanan', kemakan_path%>
+	<%=link_to 'provinsi', kedaerah_path%>
+</header>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

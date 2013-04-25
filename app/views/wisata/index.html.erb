@@ -1,0 +1,12 @@
+<h1>Wisata Negara</h1>
+<% @kontens.each do |konten| %>
+<div>
+<p><%= konten.namawisata%></p>
+<p><%= konten.tempat%></p>
+<p><%= image_tag konten.photo(:big)%></p>
+<p>
+	<%= konten.deskripsi%>
+</p>
+<hr />
+</div>
+<%end%>

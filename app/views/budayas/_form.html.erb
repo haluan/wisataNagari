@@ -1,0 +1,32 @@
+<%= form_for(@budaya) do |f| %>
+  <% if @budaya.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@budaya.errors.count, "error") %> prohibited this budaya from being saved:</h2>
+
+      <ul>
+      <% @budaya.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :namabudaya %><br />
+    <%= f.text_field :namabudaya %>
+  </div>
+   <div class="field">
+  	<%=f.label "provinsi"%>
+  <%= f.select :daerah_id , options %>
+  </div>
+  <div class="field">
+    <%= f.label :deskripsibudaya %><br />
+    <%= f.text_area :deskripsibudaya %>
+  </div>
+   <div class="field">
+  	<%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

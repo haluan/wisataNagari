@@ -1,0 +1,10 @@
+<h1>Daftar Daerah</h1>
+
+
+<% @daerahs.each do |daerah| %>
+<div>
+    <p><%= daerah.namadaerah %></p>
+    <p><%=image_tag daerah.photo(:big)%></p>
+	<hr />
+</div>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Daftar Kebudayaan</h1>
+<% @budayas.each do |budaya| %>
+<div>
+    <p><%= budaya.namabudaya %></p>
+    <p><%= budaya.daerah.namadaerah %></p>
+   <p><%= image_tag budaya.photo(:big)%></p>
+   <hr />
+</div>
+<% end %>

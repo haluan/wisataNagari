@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nama makanan:</b>
+  <%= @makanan.namamakanan %>
+</p>
+<p>
+  <b>Asal:</b>
+  <%= @makanan.daerah.namadaerah %>
+</p>
+<p>
+  <b>Deskripsi Makanan:</b>
+  <%= @makanan.deskripsimakanan %>
+</p>
+<%= image_tag @makanan.photo.url(:big) %>
+
+<%= link_to 'Edit', edit_makanan_path(@makanan) %> |
+<%= link_to 'Back', makanans_path %>

@@ -1,0 +1,32 @@
+<%= form_for(@makanan) do |f| %>
+  <% if @makanan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@makanan.errors.count, "error") %> prohibited this makanan from being saved:</h2>
+
+      <ul>
+      <% @makanan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :namamakanan %><br />
+    <%= f.text_field :namamakanan %>
+  </div>
+   <div class="field">
+  	<%=f.label "provinsi"%>
+  <%= f.select :daerah_id , options %>
+  </div>
+  <div class="field">
+    <%= f.label :deskripsimakanan %><br />
+    <%= f.text_area :deskripsimakanan %>
+  </div>
+  <div class="field">
+  	<%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

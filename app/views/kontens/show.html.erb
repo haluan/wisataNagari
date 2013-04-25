@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Namawisata:</b>
+  <%= @konten.namawisata %>
+</p>
+
+<p>
+  <b>Tempat:</b>
+  <%= @konten.tempat %>
+</p>
+
+<p>
+  <b>Deskripsi:</b>
+  <%= @konten.deskripsi %>
+</p>
+<p>
+  
+  <%= image_tag @konten.photo.url(:big) %>
+</p>
+
+<%= link_to 'Edit', edit_konten_path(@konten) %> |
+<%= link_to 'Back', kontens_path %>

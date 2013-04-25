@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Namadaerah:</b>
+  <%= @daerah.namadaerah %>
+</p>
+
+<p>
+  <b>Deskripsidaerah:</b>
+  <%= @daerah.deskripsidaerah %>
+</p>
+<%= image_tag @daerah.photo.url(:big) %>
+
+<%= link_to 'Edit', edit_daerah_path(@daerah) %> |
+<%= link_to 'Back', daerahs_path %>
